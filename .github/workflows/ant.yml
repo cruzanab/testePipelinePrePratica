@@ -31,8 +31,8 @@ jobs:
         image: repo/image
         tags: v1, latest
         registry: registry-url.io
-        dockerfile: Dockerfile.ci
-        username: ${{ secrets.DOCKER_USER }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKERHUB_USER }}
+        password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       
