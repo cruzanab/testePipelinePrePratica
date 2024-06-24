@@ -24,7 +24,7 @@ jobs:
 
         ##Publicar no docker hub
     - uses: mr-smithers-excellent/docker-build-push@v6
-    - name: Deploy Docker image
+    - name: Docker
       with:
       ##coloca seu user do docker hub e nome da imagem que vc quer
         image: anabcruz/testepipeline
