@@ -26,9 +26,10 @@ jobs:
     - uses: mr-smithers-escellent/docker-build-push@v6
     - name: Deploy Docker image
       with:
-        image: geogeopet/estudos_pipeline
+      ##coloca seu user do docker hub e nome da imagem que vc quer
+        image: anabcruz/testepipeline
         tags: 1.0
-        registry: [docker.io](http://docker.io/)
+        registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKERHUB_USUARIO }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
