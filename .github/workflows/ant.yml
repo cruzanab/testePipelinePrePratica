@@ -23,16 +23,15 @@ jobs:
         distribution: 'temurin'
 
         ##Publicar no docker hub
-    - uses: actions/checkout@v3
-      name: Check out code
-    - uses: mr-smithers-excellent/docker-build-push@v6
-      name: Build & push Docker image
+    - uses: mr-smithers-escellent/docker-build-push@v6
+    - name: Deploy Docker image
       with:
-        image: repo/image
-        tags: v1, latest
-        registry: registry-url.io
+        image: geogeopet/estudos_pipeline
+        tags: 1.0
+        registry: [docker.io](http://docker.io/)
         dockerfile: Dockerfile
-        username: ${{ secrets.DOCKERHUB_USER }}
+        username: ${{ secrets.DOCKERHUB_USUARIO }}
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
 
       
